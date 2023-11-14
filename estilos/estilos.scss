@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Work+Sans:wght@100..900&display=swap');
+
+$tipografia1:  'Montserrat', sans-serif;
+$tipografia2:  'Work Sans', sans-serif;
+$color-primario: #9baaab;
+
+:root{
+    --bs-body-bg: #ffffff;
+    --bs-primary-bg-subtle:transparent;  
+}
+
+#excepcion1 {font-family: $tipografia2;color: $color-primario;}
+
+body {font-family: $tipografia1;color: $color-primario;}
+
+
+.btn-outline-success{
+    --bs-btn-border-color: grey;
+    --bs-btn-hover-bg:$color-primario; 
+}
+
+
+.carousel-indicators [data-bs-target]{
+background-color: $color-primario;
+}
+
+
+.carousel-caption {
+    color:white;
+    background-color: transparent;
+}
+
+footer {background-color: #aba590; height: 20vh;}
+
+@media (max-width: 768px)
+{
+    header, main{ height: auto;}
+    body {font-size: 80%;}
+    
+}
+
+
+

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interior Vision</title>
+
+<!--link a lightbox para la librería-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+
+<!--link de bootstrap iconografía-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+<!--link a bootstrap css-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+<!--link archivo css-->
+<link rel="stylesheet" href="estilos/estilos.css">
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-md fixed-top " data-bs-theme="dark" style="background-color: #aba590;">
+        <div class="container-fluid">
+        
+            <a class="navbar-brand" href="#">
+              <img src="imagenes/Icono.png" alt="Bootstrap" width="30"> IV
+            </a>
+       
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#desplegable"   a>
+    
+              <span class="icon-library"></span>
+            
+            </button>
+      
+            <div class="collapse navbar-collapse" id="desplegable">
+              <ul class="navbar-nav d-flex w-100">
+                <li class="nav-item">
+                  <a class="nav-link active"  href="#">Inicio</a>
+                </li>
+      
+      
+                <li class="nav-item">
+                  <a class="nav-link"  href="#">Productos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"  href="#">Estudio</a>
+                  </li>
+              
+                <li class="nav-item dropdown dropstart ms-md-auto">
+                  <a class="nav-link dropdown-toggle" href="#"  data-bs-toggle="dropdown" >
+                   Contacto
+                  </a>
+                <ul class="dropdown-menu ">
+                    <li> <button class="dropdown-item" data-bs-toggle="modal" data-bs-target="#miModal">Contacto</button></li>
+                  
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav> <!--cierre de la barra de navegación-->
+
+
+<!--modal (puede estar en cualquier parte del archivo, se muestra superpuesto)-->
+<div class="modal fade modal-fullscreen-md-down" id="miModal" tabindex="-1" > <!--con el -1 digo que no lo voy a mostrar hasta que lo toco-->
+  <div class="modal-dialog modal-xl modal-fullscreen-lg-down">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h1 class="modal-title h6" id="miModal">Formulario de contacto</h1>
+        <button type="button" class="bi bi-x-circle-fill" data-bs-dismiss="modal"></button>
+      </div> 
+      
+
+      <div class="modal-body">
+
+        <form class="needs-validation" novalidate>
+
+          <div class="row justify-content-center">
+            <div class="col-md-5">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" pattern="[a-zA-Z]{3,15}" title="Ojo con el máximo" required class="form-control" name="nombre" id="nombre">
+                <div class="valid-feedback">Muy bien el campo</div> <!--validación-->
+                <div class="invalid-feedback">Está mal el campo</div><!--validación-->
+            </div> <!--primera columna del formulario-->
+
+            <div class="col-md-5">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" required class="form-control" name="email" id="email">
+                <div class="valid-feedback">Muy bien el campo</div> <!--validación-->
+                <div class="invalid-feedback">Está mal el campo</div><!--validación-->
+            </div> <!--segunda columna del formulario-->
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-10">
+              <label for="comentarios" pattern="[a-zA-Z0-9]{5,30}" class="form-label">Comentarios</label>
+              <textarea name="comentarios" required class="form-control" id="comentarios"></textarea>
+            </div>
+          </div>
+
+          <div class="row justify-content-end">
+            <div class="col-1">
+              <button class="btn btn-outline-success mt-2">Enviar</button>
+            </div>
+          </div>
+
+        </form>
+
+
+      </div>
+
+
+      <div class="modal-footer">
+        <button class="btn btn-warning" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<header>
+
+    <div id="miSlider" class="carousel slide"> <!--abre carousel-->
+
+        <div class="carousel-indicators"> <!--abre indicadores-->
+            <button type="button" data-bs-target="#miSlider" data-bs-slide-to="0" class="active"></button>
+
+            <button type="button" data-bs-target="#miSlider" data-bs-slide-to="1"></button>
+
+            <button type="button" data-bs-target="#miSlider" data-bs-slide-to="2"></button>
+
+        </div> <!--cierra indicadores-->
+
+        <div class="carousel-inner"> <!--abre carousel-inner-->
+            
+            <div class="carousel-item active"><!--abre primer imágen-->
+                <img src="imagenes/img 1.jpg" class="d-block w-100 mx-0" alt="imagen 1">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Sala de Estar</h5>
+                    <h6>Diseñado con nuestros productos de la linea Nordic</h6>
+                </div>
+            </div><!--cierra primera imagen-->
+
+            <div class="carousel-item"><!--abre segunda imágen-->
+                <img src="imagenes/img 2.jpg" class="d-block w-100 mx-0" alt="imagen 2">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Cocina</h5>
+                    <h6>Terminaciones de muebles en madera natrual, contrastando con apliques y griferías en negro opaco.</h6>
+                </div>
+            </div> <!--cierra segunda imagen-->
+
+            <div class="carousel-item"> <!--abre tercer imágen-->
+                <img src="imagenes/img 3.jpg" class="d-block w-100 mx-0" alt="imagen 3">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Concepto open space</h5>
+                    <ph6>Living y galería integrados, ideal para recibir muchas visitas. <br> Sillón de nuestra línea cousy</h6>
+                </div>
+            </div> <!--cierra tercera imagen-->
+
+        
+        </div> <!--cierra carousel inner-->
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#miSlider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Previous</span>
+        </button> <!--flecha de la izquierda-->
+        <button class="carousel-control-next" type="button" data-bs-target="#miSlider" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Next</span>
+        </button> <!--flecha de la derecha-->
+
+    </div> <!--cierra carousel-->
+
+</header>
+
+
+
+
+
+
+<main id="excepcion1">
+    <div>
+        <section class="container-fluid col-md-7 mt-5 mb-5">
+
+            <h1 class="display-5">Interior Vision</h1>
+            <p class="fst-italic"> Creamos Espacios Disfrutables. <br>
+                Hacemos proyectos de interiorismo, reformas y estilismo de ambientes trabajando en conjunto con nuestros clientes</p>
+
+        </section>
+
+
+
+
+        <main class="container-md pt-5">
+            <div class="container-fluid d-flex flex-row justify-content-center col-md-9 mt-5 mb-5">
+                <article class="col-md-4 text-start">
+                  <img src="imagenes/icono (2).png" alt="icono plata">
+                  <p class="list-inline-item"> 15% off en efectivo</h3>
+                </article> <!-- cierra primer articulo -->
+          
+                <article class="col-md-4 text-center">
+                    <img src="imagenes/icono (3).png" alt="icono tarjeta">
+                    <p class="list-inline-item"> 3 cuotas sin interés</h3>
+                </article> <!-- cierra segundo articulo -->
+          
+                <article class="col-md-4 text-end">
+                    <img src="imagenes/icono (1).png" alt="icono wpp">
+                    <p class="list-inline-item">Antención online las 24hs</h3>
+                </article> <!-- cierra tercer articulo -->
+          </div>
+          </main>
+          
+                  
+          <main class="container-md pt-5">
+            <p class=" display-6 text-center" > Nuestros Proyectos</p>
+            
+            <div class="container-fluid d-flex flex-row justify-content-start col-md-9 mt-5 mb-5">
+              <section class="col-md">
+                <a href="imagenes/img 10.jpg" data-lightbox="galeria" data-title="Living">
+                  <img class="d-block w-100 img-fluid rounded-5" src="imagenes/img 10.jpg" alt=""></a>
+
+              </section>
+          
+              <section class="col-md ms-5">
+                <p>Queremos que vivas tus espacios como mereces. Fabricamos a medida los muebles que necesitas para generar ese espacio soñado.<br> Seguinos en nuestras redes sociales.</p>
+                <a href="https://www.instagram.com/mcgeeandco/?hl=es" class="btn btn-outline-secondary">Instagram</a>
+              </section>
+            
+          
+            </div>
+          </main>
+          
+          
+          
+          <main class="container-md pt-5">
+            <p class=" display-6 text-center">Destacados</p>
+          
+            <div class="container-fluid d-flex flex-row justify-content-center col-md-9 mt-5 mb-5">
+          
+              <article class="col-md mx-2">
+                <img src="imagenes/img 4.jpg" class="d-block w-100 rounded-4" alt="item tienda 1">
+                <p class="text-center"> Lámpara Chick Cobre</p>
+                <p class="fw_lighter text-center">$74.000</p>
+              </article> <!-- cierra primer articulo -->
+          
+              <article class="col-md mx-2">
+                
+                  <img src="imagenes/img 5.jpg" class="d-block w-100 rounded-4" alt="item tienda 2">
+                  <p class="text-center"> Banqueta Toledo</p>
+                  <p class="fw_lighter text-center">$80.000</p>
+                
+              </article> <!-- cierra segundo articulo -->
+          
+              <article class="col-md mx-2">
+                
+                  <img src="imagenes/img 6.jpg" class="d-block w-100 rounded-4" alt="item tienda 3">
+                  <p class="text-center">Silla Grey Nordic</p>
+                  <p class="fw_lighter text-center">$98.000</p>
+                
+              </article> <!-- cierra tercer articulo -->
+          
+              <article class="col-md mx-2">
+                
+                  <img src="imagenes/img 7.jpg" class="d-block w-100 rounded-4" alt="item tienda 4">
+                  <p class="text-center">Sillón Soft Crudo</p>
+                  <p class="fw_lighter text-center">$150.800</p>
+                
+              </article> <!-- cierra cuarto articulo -->
+          </div>
+          
+          </main>
+          
+          
+          <main class="container-md pt-5">
+            <p class=" display-6 text-center" > Oferta</p>
+          
+            <div class="container-fluid d-flex flex-row justify-content-center col-md-9 mt-5 mb-5">
+          
+              <article class="col-md mx-2">
+                <img src="imagenes/img 8.jpg" class="d-block w-100 rounded-bottom-5 rounded-start-0" alt="item tienda 1">
+
+                <a class="link-underline link-underline-opacity-0 text-body-tertiary d-flex justify-content-center" href="https://www.mcgeeandco.com/products/morris-co-x-mcgee-co-willow-pillow-cover">Almohadón Rita</a>
+
+                <p class="fw-lighter text-center"> <del>$25.000</del> 18.500</p>
+              </article> <!-- cierra primer articulo -->
+          
+              <article class="col-md mx-2">
+                  <img src="imagenes/img 9.jpg" class="d-block w-100 rounded-bottom-5" alt="item tienda 2">
+
+                  <a class="link-underline link-underline-opacity-0 text-body-tertiary d-flex justify-content-center" href="https://www.mcgeeandco.com/products/morris-co-x-mcgee-co-willow-pillow-cover">Puff Asia</a>
+
+                  <p class="fw-lighter text-center "><del>$100.000 </del>  91.000</p>
+              </article> <!-- cierra segundo articulo -->
+          
+              <article class="col-md mx-2">
+                <img src="imagenes/img 11.jpg" class="d-block w-100 rounded-5 rounded-end-0 rounded-top-0" alt="item tienda 2">
+
+                <a class="link-underline link-underline-opacity-0 text-body-tertiary d-flex justify-content-center" href="https://www.mcgeeandco.com/products/morris-co-x-mcgee-co-willow-pillow-cover">Silla Cloe</a>
+                
+                <p class="fw-lighter text-center "><del>$280.000 </del>  215.000</p>
+            </article> <!-- cierra tercer articulo -->
+          
+          <!-- se uqe no está como el modelo pero es porque para mi quedaba mejor estéticamente los bordes de esa forma -->
+          </div>
+          
+          </main>
+          
+            
+          
+          
+          
+          <!-- js de lightbox -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+          
+          
+          <!--link de js-->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+          
+          <!--link de código-->
+          <script src="js/codigo.js"></script>
+          
+          
+          
+          
+          
+          
+          
+          </body>
+          
+          <footer>
+          
+          
+          </footer>
+          
+          
+          </html>
